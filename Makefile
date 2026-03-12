@@ -15,7 +15,6 @@ help:
 
 init:
 	@if [ ! -f .env ]; then cp .env.example .env && echo "Created .env from .env.example"; else echo ".env already exists, skipping"; fi
-	npm install
 
 run:
 	docker compose up --build
