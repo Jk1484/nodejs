@@ -1,0 +1,3 @@
+aws_region = "us-east-1"
+app_name   = "nodejs-todo"
+key_name   = "your-key-pair-name"

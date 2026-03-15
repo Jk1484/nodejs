@@ -1,4 +1,4 @@
-.PHONY: init run dev down logs migrate lint format build k8s-build k8s-deploy k8s-down help
+.PHONY: init run dev down logs migrate lint format build k8s-build k8s-deploy k8s-down tf-init tf-plan tf-apply tf-destroy help
 
 help:
 	@echo "Usage: make <target>"
@@ -56,3 +56,15 @@ k8s-deploy:
 
 k8s-down:
 	kubectl delete namespace nodejs-app
+
+tf-init:
+	cd terraform && terraform init
+
+tf-plan:
+	cd terraform && terraform plan
+
+tf-apply:
+	cd terraform && terraform apply
+
+tf-destroy:
+	cd terraform && terraform destroy

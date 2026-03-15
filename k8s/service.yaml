@@ -3,10 +3,13 @@ kind: Service
 metadata:
   name: nodejs-app
   namespace: nodejs-app
+  labels:
+    app: nodejs-app
 spec:
   selector:
     app: nodejs-app
   ports:
-    - port: 3000
+    - name: http
+      port: 3000
       targetPort: 3000
   type: NodePort
